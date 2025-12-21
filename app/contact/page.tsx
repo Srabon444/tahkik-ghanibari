@@ -128,9 +128,9 @@ export default function ContactPage() {
 
             {/* Map */}
             <div className="lg:sticky lg:top-20 h-fit">
-              <Card>
+              <Card className="overflow-hidden p-0">
                 <CardContent className="p-0">
-                  <div className="aspect-[4/3] lg:aspect-square relative overflow-hidden rounded-lg">
+                  <div className="aspect-[4/3] lg:aspect-square relative">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4418.003759718117!2d90.34412577596453!3d23.735135789360875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bfaa90893d95%3A0x6ed9fdd3bc374170!2zVEFIS0lRIOCmpOCmvuCmueCmleCmv-CmlSDgppjgpr7gpqjgpr_gpqzgpr7gp5zwpr8!5e1!3m2!1sen!2sbd!4v1766296684723!5m2!1sen!2sbd"
                       width="100%"
