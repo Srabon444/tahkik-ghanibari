@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>অর্ডার নিশ্চিতকরণ</title>
+    <!-- Added responsive styles and media queries for mobile devices -->
+    <style>
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .header-title {
+                font-size: 22px !important;
+            }
+            .success-badge {
+                font-size: 16px !important;
+                padding: 8px 16px !important;
+            }
+            .section-title {
+                font-size: 18px !important;
+            }
+            .info-table td {
+                display: block !important;
+                width: 100% !important;
+                padding: 4px 0 !important;
+            }
+            .order-table {
+                font-size: 12px !important;
+            }
+            .order-table th,
+            .order-table td {
+                padding: 8px 4px !important;
+            }
+            .total-row {
+                font-size: 16px !important;
+            }
+            .padding-mobile {
+                padding: 15px !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f5f5f0;">
+    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <td align="center" style="padding: 20px 10px;">
+                <!-- Added email-container class and made width 100% responsive -->
+                <table role="presentation" class="email-container" style="width: 600px; max-width: 100%; border-collapse: collapse; background-color: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <!-- Header -->
+                    <tr>
+                        <td class="padding-mobile" style="background: linear-gradient(135deg, #d4a373 0%, #8b7355 100%); padding: 30px 20px; text-align: center;">
+                            <h1 class="header-title" style="margin: 0; color: #ffffff; font-size: 28px; font-weight: bold;">তাহকিক ঘানিবাড়ি</h1>
+                            <p style="margin: 5px 0 0; color: #f5f5f0; font-size: 14px;">খাঁটি সরিষার তেল</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Success Message -->
+                    <tr>
+                        <td class="padding-mobile" style="padding: 30px 20px; text-align: center; background-color: #f0f4e8;">
+                            <div class="success-badge" style="display: inline-block; background-color: #4a7c59; color: white; padding: 10px 20px; border-radius: 5px; font-size: 18px; font-weight: bold;">
+                                ✓ নতুন অর্ডার প্রাপ্ত
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Order Details -->
+                    <tr>
+                        <td class="padding-mobile" style="padding: 20px 30px;">
+                            <h2 class="section-title" style="color: #3a3a2a; font-size: 20px; margin: 0 0 20px; border-bottom: 2px solid #d4a373; padding-bottom: 10px;">অর্ডার বিস্তারিত</h2>
+                            
+                            <!-- Customer Information -->
+                            <!-- Added info-table class for responsive stacking -->
+                            <table class="info-table" style="width: 100%; margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding: 8px 0; color: #666; font-size: 14px; width: 120px;">নাম:</td>
+                                    <td style="padding: 8px 0; color: #3a3a2a; font-size: 14px; font-weight: bold;">{{customer_name}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px 0; color: #666; font-size: 14px;">মোবাইল:</td>
+                                    <td style="padding: 8px 0; color: #3a3a2a; font-size: 14px; font-weight: bold;">{{customer_phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px 0; color: #666; font-size: 14px;">ঠিকানা:</td>
+                                    <td style="padding: 8px 0; color: #3a3a2a; font-size: 14px;">{{customer_address}}</td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Order Items -->
+                            <h3 class="section-title" style="color: #3a3a2a; font-size: 16px; margin: 20px 0 10px; border-bottom: 1px solid #e0e0d5; padding-bottom: 8px;">অর্ডার আইটেম</h3>
+                            <!-- Added order-table class and made table scrollable on mobile -->
+                            <div style="overflow-x: auto;">
+                                <table class="order-table" style="width: 100%; min-width: 400px; border-collapse: collapse; margin-bottom: 20px;">
+                                    <thead>
+                                        <tr style="background-color: #f5f5f0;">
+                                            <th style="padding: 10px; text-align: left; color: #3a3a2a; font-size: 13px; border-bottom: 2px solid #d4a373;">পণ্য</th>
+                                            <th style="padding: 10px; text-align: center; color: #3a3a2a; font-size: 13px; border-bottom: 2px solid #d4a373;">সাইজ</th>
+                                            <th style="padding: 10px; text-align: center; color: #3a3a2a; font-size: 13px; border-bottom: 2px solid #d4a373;">পরিমাণ</th>
+                                            <th style="padding: 10px; text-align: right; color: #3a3a2a; font-size: 13px; border-bottom: 2px solid #d4a373;">মূল্য</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{order_items}}
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Total -->
+                            <table style="width: 100%; margin-bottom: 20px;">
+                                <tr>
+                                    <td class="total-row" style="padding: 10px; text-align: right; font-size: 18px; font-weight: bold; color: #3a3a2a; border-top: 2px solid #d4a373;">
+                                        মোট: <span style="color: #4a7c59;">৳{{total_amount}}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Payment Reference -->
+                            <div style="background-color: #fff8e8; border-left: 4px solid #d4a373; padding: 15px; margin-bottom: 20px;">
+                                <p style="margin: 0; color: #666; font-size: 13px;">পেমেন্ট রেফারেন্স নম্বর:</p>
+                                <p style="margin: 5px 0 0; color: #3a3a2a; font-size: 16px; font-weight: bold; word-break: break-all;">{{payment_reference}}</p>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td class="padding-mobile" style="background-color: #3a3a2a; padding: 20px; text-align: center;">
+                            <p style="margin: 0 0 10px; color: #f5f5f0; font-size: 14px;">যোগাযোগ করুন</p>
+                            <p style="margin: 5px 0; color: #d4a373; font-size: 13px;">📱 মোবাইল: 01813-558299</p>
+                            <p style="margin: 5px 0; color: #d4a373; font-size: 13px;">✉️ ইমেইল: tahkiqorganic@gmail.com</p>
+                            <p style="margin: 15px 0 0; color: #999; font-size: 12px;">তাহকিক ঘানিবাড়ি - খাঁটি সরিষার তেলের বিশ্বস্ত উৎস</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
