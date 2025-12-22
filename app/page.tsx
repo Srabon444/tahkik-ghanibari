@@ -175,7 +175,15 @@ export default function HomePage() {
             <div className="flex items-center gap-2">
               <Leaf className="h-4 w-4 text-primary" />
               <span className="text-xs md:text-sm text-muted-foreground text-center">
-                © ২০২৫ তাহকিক ঘানিবাড়ি। সর্বস্বত্ব সংরক্ষিত।
+                © ২০২৫ তাহকিক ঘানিবাড়ি। সর্বস্বত্ব সংরক্ষিত। |{" "}
+                <a
+                  href="https://www.devashraful.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  পাওয়ার্ড বাই আশরাফুল
+                </a>
               </span>
             </div>
             <div className="flex flex-wrap justify-center gap-3 md:gap-4">
