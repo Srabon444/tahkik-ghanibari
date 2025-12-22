@@ -141,7 +141,7 @@ export default function HomePage() {
           <div className="grid gap-6 md:gap-8 lg:grid-cols-2 items-center">
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
               <Image
-                src="/traditional-mustard-oil-making-process-farmer-with.jpg"
+                src="/oil-extract.png"
                 alt="ঐতিহ্যবাহী পদ্ধতি"
                 fill
                 className="object-cover"

@@ -76,7 +76,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-medium text-sm mb-1">ঠিকানা</h3>
                         <p className="text-sm text-muted-foreground">
-                          আর্শিনগর (বসিলা ব্রিজের কাছে, মোহাম্মদপুর), শক্তা, কেরানীগঞ্জ, ঢাকা, বাংলাদেশ
+                          মোহাম্মদপুর বসিলা ব্রিজ সংলগ্ন, আরশিনগর রোড, কেরানীগঞ্জ,  ঢাকা।
                         </p>
                       </div>
                     </div>
@@ -86,16 +86,8 @@ export default function ContactPage() {
                     <h3 className="font-medium text-sm mb-3">ব্যবসায়িক সময়</h3>
                     <div className="space-y-2 text-sm text-muted-foreground">
                       <div className="flex justify-between">
-                        <span>রবিবার - বৃহস্পতিবার</span>
-                        <span>সকাল ৯টা - সন্ধ্যা ৬টা</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>শুক্রবার</span>
-                        <span>বন্ধ</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>শনিবার</span>
-                        <span>সকাল ১০টা - বিকাল ৪টা</span>
+                        <span>শনিবার - শুক্রবার</span>
+                        <span>সকাল ৮টা - রাত ৯টা</span>
                       </div>
                     </div>
                   </div>
