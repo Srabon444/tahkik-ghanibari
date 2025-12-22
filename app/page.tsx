@@ -23,7 +23,7 @@ const products = [
   },
   {
     id: "3",
-    name: "জৈব সরিষার তেল",
+    name: "অর্গানিক সরিষার তেল",
     nameBangla: "Organic Mustard Oil",
     price: 480,
     image: "/organic-mustard-oil-with-fresh-mustard-plants.jpg",
