@@ -287,7 +287,7 @@ export default function CheckoutPage() {
                 <Alert>
                   <AlertCircle className="h-4 w-4" />
                   <AlertDescription className="text-xs">
-                    অনুগ্রহ করে আমাদের বিকাশ/নগদ নম্বরে টাকা পাঠান: <strong>০১৭১২৩৪৫৬৭৮</strong>
+                    অনুগ্রহ করে আমাদের বিকাশ/নগদ নম্বরে টাকা পাঠান: <strong>০১৮১৩-৫৫৮২৯৯</strong>
                   </AlertDescription>
                 </Alert>
                 <div className="space-y-1.5">
