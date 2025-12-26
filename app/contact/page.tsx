@@ -1,7 +1,7 @@
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, MessageCircle } from "lucide-react"
+import { Mail, Phone, MapPin, MessageCircle, Facebook } from "lucide-react"
 
 export default function ContactPage() {
   return (
@@ -65,6 +65,23 @@ export default function ContactPage() {
                           className="text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                         >
                           tahkiqorganic@gmail.com
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                        <Facebook className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-sm mb-1">ফেসবুক</h3>
+                        <a
+                          href="https://www.facebook.com/tahkiqbd"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          @tahkiqbd
                         </a>
                       </div>
                     </div>
