@@ -1,7 +1,7 @@
 import Script from 'next/script'
 
 export function GoogleAnalytics() {
-  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID
 
   if (!GA_MEASUREMENT_ID) {
     return null
@@ -32,7 +32,7 @@ export function GoogleAnalytics() {
 }
 
 export function GoogleTagManager() {
-  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
+  const GTM_ID = process.env.GTM_ID
 
   if (!GTM_ID) {
     return null
@@ -58,7 +58,7 @@ export function GoogleTagManager() {
 }
 
 export function GoogleTagManagerNoScript() {
-  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
+  const GTM_ID = process.env.GTM_ID
 
   if (!GTM_ID) {
     return null
