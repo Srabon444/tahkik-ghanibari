@@ -1,13 +1,25 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Phone, MapPin, MessageCircle, Facebook } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "যোগাযোগ - তাহকিক ঘানিবাড়ি | Contact Us",
+  description: "তাহকিক ঘানিবাড়ির সাথে যোগাযোগ করুন। মোবাইল: ০১৮১৩-৫৫৮২৯৯, ইমেইল: tahkiqorganic@gmail.com। কেরানীগঞ্জ, ঢাকা থেকে সরাসরি সরিষার তেল কিনুন।",
+  openGraph: {
+    title: "যোগাযোগ - তাহকিক ঘানিবাড়ি",
+    description: "আমাদের সাথে যোগাযোগ করুন - মোবাইল: ০১৮১৩-৫৫৮২৯৯",
+    url: "https://tahkiqghanibari.vercel.app/contact",
+  },
+}
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
       <Header />
 
+      <main>
       <section className="py-8 md:py-12 lg:py-16 bg-secondary/10">
         <div className="container max-w-6xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16">
           <div className="mb-6 md:mb-8 text-center space-y-2">
@@ -184,6 +196,7 @@ export default function ContactPage() {
           </div>
         </div>
       </footer>
+      </main>
     </div>
   )
 }

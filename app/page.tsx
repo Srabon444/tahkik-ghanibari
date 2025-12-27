@@ -1,8 +1,23 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { ProductCard } from "@/components/product-card"
 import { Button } from "@/components/ui/button"
 import { Leaf, Droplets, Shield, Truck } from "lucide-react"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "প্রিমিয়াম সরিষার তেল - তাহকিক ঘানিবাড়ি | Premium Mustard Oil Bangladesh",
+  description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল। কোল্ড প্রেসড, অর্গানিক সরিষার তেল সরাসরি ঘানিবাড়ি থেকে। Premium quality cold pressed mustard oil from traditional farming.",
+  keywords: "সরিষার তেল, mustard oil, খাঁটি সরিষার তেল, cold pressed mustard oil, organic mustard oil, ঘানির তেল, তাহকিক ঘানিবাড়ি, bangladesh mustard oil",
+  openGraph: {
+    title: "প্রিমিয়াম সরিষার তেল - তাহকিক ঘানিবাড়ি",
+    description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল",
+    url: "https://tahkiqghanibari.vercel.app",
+    siteName: "তাহকিক ঘানিবাড়ি",
+    type: "website",
+    locale: "bn_BD",
+  },
+}
 
 const products = [
   {
@@ -45,6 +60,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
+      <main>
       <section className="relative overflow-hidden bg-secondary/20 py-8 md:py-12 lg:py-16">
         <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-10 items-center">
@@ -203,6 +219,7 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+      </main>
     </div>
   )
 }

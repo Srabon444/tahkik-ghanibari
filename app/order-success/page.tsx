@@ -1,13 +1,21 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle } from "lucide-react"
 
+export const metadata: Metadata = {
+  title: "অর্ডার সফল - তাহকিক ঘানিবাড়ি | Order Success",
+  description: "আপনার অর্ডার সফলভাবে সম্পন্ন হয়েছে। ক্রয়ের জন্য ধন্যবাদ।",
+  robots: "noindex, nofollow",
+}
+
 export default function OrderSuccessPage() {
   return (
     <div className="min-h-screen">
       <Header />
+      <main>
       <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16 py-8 md:py-12 mb-8">
         <Card className="max-w-md mx-auto text-center py-6 md:py-10">
           <CardContent className="space-y-4 md:space-y-5">
@@ -32,6 +40,7 @@ export default function OrderSuccessPage() {
           </CardContent>
         </Card>
       </div>
+      </main>
     </div>
   )
 }

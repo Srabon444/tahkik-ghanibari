@@ -9,9 +9,56 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Tahkiq Ghanibari - Pure Mustard Oil | তাহকিক ঘানিবাড়ি",
-  description: "Premium quality mustard oil from traditional farming",
-  generator: "app",
+  title: {
+    default: "Tahkiq Ghanibari - Pure Mustard Oil | তাহকিক ঘানিবাড়ি - খাঁটি সরিষার তেল",
+    template: "%s | তাহকিক ঘানিবাড়ি"
+  },
+  description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল। কোল্ড প্রেসড, অর্গানিক সরিষার তেল সরাসরি ঘানিবাড়ি থেকে। Premium quality cold pressed mustard oil from traditional farming in Bangladesh.",
+  keywords: "সরিষার তেল, mustard oil, খাঁটি সরিষার তেল, cold pressed mustard oil, organic mustard oil, ঘানির তেল, তাহকিক ঘানিবাড়ি, bangladesh mustard oil, pure mustard oil",
+  authors: [{ name: "Tahkiq Ghanibari" }],
+  creator: "Tahkiq Ghanibari",
+  publisher: "Tahkiq Ghanibari",
+  metadataBase: new URL("https://tahkiqghanibari.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "bn_BD",
+    url: "https://tahkiqghanibari.vercel.app",
+    siteName: "তাহকিক ঘানিবাড়ি",
+    title: "Tahkiq Ghanibari - Pure Mustard Oil | তাহকিক ঘানিবাড়ি",
+    description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল",
+    images: [
+      {
+        url: "/mustard-oil-bottle-with-mustard-flowers-and-seeds-.jpg",
+        width: 1200,
+        height: 630,
+        alt: "তাহকিক ঘানিবাড়ি - প্রিমিয়াম সরিষার তেল",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tahkiq Ghanibari - Pure Mustard Oil",
+    description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল",
+    images: ["/mustard-oil-bottle-with-mustard-flowers-and-seeds-.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "g-fEhzecpH0Xx0EzeLCmNiX6zTeloq_lCPH35YYPATw",
+  },
+  generator: "Next.js",
   icons: {
     icon: [
       {
@@ -37,7 +84,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="bn">
       <meta name="google-site-verification" content="g-fEhzecpH0Xx0EzeLCmNiX6zTeloq_lCPH35YYPATw" />
       <body className={`font-sans antialiased`}>
         <CartProvider>{children}</CartProvider>
