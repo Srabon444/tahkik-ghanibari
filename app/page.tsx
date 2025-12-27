@@ -151,7 +151,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div className="aspect-video rounded-lg overflow-hidden bg-muted shadow-md">
+            <div className="aspect-square rounded-lg overflow-hidden bg-muted shadow-md">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftahkiqbd%2Fvideos%2F980055749843853%2F&show_text=false&width=560&t=0"
                 width="100%"
@@ -163,7 +163,7 @@ export default function HomePage() {
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               />
             </div>
-            <div className="aspect-video rounded-lg overflow-hidden bg-muted shadow-md">
+            <div className="aspect-square rounded-lg overflow-hidden bg-muted shadow-md">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D413740924807469&show_text=false&width=267&t=0"
                 width="100%"
@@ -175,7 +175,7 @@ export default function HomePage() {
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               />
             </div>
-            <div className="aspect-[9/16] rounded-lg overflow-hidden bg-muted shadow-md mx-auto max-w-sm w-full">
+            <div className="aspect-square rounded-lg overflow-hidden bg-muted shadow-md">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1230128284652122&show_text=false&width=267&t=0"
                 width="100%"
