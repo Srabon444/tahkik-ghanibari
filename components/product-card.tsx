@@ -12,22 +12,24 @@ interface ProductCardProps {
   id: string
   name: string
   nameBangla: string
-  price: number
+  pricing: Record<string, number>
   image: string
   sizes: string[]
 }
 
-export function ProductCard({ id, name, nameBangla, price, image, sizes }: ProductCardProps) {
+export function ProductCard({ id, name, nameBangla, pricing, image, sizes }: ProductCardProps) {
   const { addToCart } = useCart()
   const [selectedSize, setSelectedSize] = useState(sizes[0])
   const [added, setAdded] = useState(false)
+
+  const currentPrice = pricing[selectedSize] || pricing[sizes[0]]
 
   const handleAddToCart = () => {
     addToCart({
       id,
       name,
       nameBangla,
-      price,
+      price: currentPrice,
       image,
       size: selectedSize,
     })
@@ -51,7 +53,7 @@ export function ProductCard({ id, name, nameBangla, price, image, sizes }: Produ
           <p className="text-xs md:text-sm text-muted-foreground">{nameBangla}</p>
         </div>
         <div className="flex w-full items-center justify-between">
-          <span className="text-lg md:text-xl font-bold text-primary">৳{price}</span>
+          <span className="text-lg md:text-xl font-bold text-primary">৳{currentPrice}</span>
           <Select value={selectedSize} onValueChange={setSelectedSize}>
             <SelectTrigger className="w-28 h-8 text-xs">
               <SelectValue />

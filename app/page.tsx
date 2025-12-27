@@ -24,16 +24,22 @@ const products = [
     id: "1",
     name: "মাঘি+শ্বেতী সরিষার তেল",
     nameBangla: "Maghi+Shweti Mustard Oil",
-    price: 290,
     image: "/premium-mustard-oil-bottle-on-wooden-surface.jpg",
+    pricing: {
+      "১লিটার": 290,
+      "৫লিটার": 1450,
+    },
     sizes: ["১লিটার", "৫লিটার"],
   },
   {
     id: "2",
     name: "শুধুমাত্র মাঘি সরিষার তেল",
     nameBangla: "Pure Maghi Mustard Oil",
-    price: 350,
     image: "/cold-pressed-mustard-oil-with-mustard-seeds.jpg",
+    pricing: {
+      "১লিটার": 350,
+      "৫লিটার": 1750,
+    },
     sizes: ["১লিটার", "৫লিটার"],
   },
 ]
@@ -145,7 +151,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+            <div className="rounded-lg overflow-hidden bg-muted" style={{ height: '400px' }}>
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftahkiqbd%2Fvideos%2F980055749843853%2F&show_text=false&width=560&t=0"
                 width="100%"
@@ -157,7 +163,7 @@ export default function HomePage() {
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               />
             </div>
-            <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+            <div className="rounded-lg overflow-hidden bg-muted" style={{ height: '400px' }}>
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D413740924807469&show_text=false&width=267&t=0"
                 width="100%"
@@ -169,7 +175,7 @@ export default function HomePage() {
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               />
             </div>
-            <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+            <div className="rounded-lg overflow-hidden bg-muted" style={{ height: '400px' }}>
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1230128284652122&show_text=false&width=267&t=0"
                 width="100%"
