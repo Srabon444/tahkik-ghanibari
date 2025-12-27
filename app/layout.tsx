@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { CartProvider } from "@/lib/cart-context"
 import { GoogleAnalytics, GoogleTagManager, GoogleTagManagerNoScript } from "@/components/analytics"
+import { StructuredData } from "@/components/structured-data"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -88,6 +89,7 @@ export default function RootLayout({
     <html lang="bn">
       <head>
         <GoogleTagManager />
+        <StructuredData />
       </head>
       <body className={`font-sans antialiased`}>
         <GoogleTagManagerNoScript />
