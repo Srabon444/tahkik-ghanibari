@@ -23,12 +23,13 @@ export default function CheckoutPage() {
     name: "",
     phone: "",
     address: "",
+    deliveryLocation: "inside-dhaka",
     paymentReference: "",
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const shippingCost = 60
+  const shippingCost = formData.deliveryLocation === "inside-dhaka" ? 50 : 100
   const grandTotal = totalPrice + shippingCost
 
   const validateForm = () => {
@@ -76,6 +77,7 @@ export default function CheckoutPage() {
       customer_name: formData.name,
       customer_phone: formData.phone,
       delivery_address: formData.address,
+      delivery_location: formData.deliveryLocation === "inside-dhaka" ? "ঢাকার মধ্যে" : "ঢাকার বাইরে",
       payment_reference: formData.paymentReference,
       order_items: cartItems,
       subtotal: `৳${totalPrice}`,
@@ -290,6 +292,20 @@ export default function CheckoutPage() {
                     অনুগ্রহ করে আমাদের বিকাশ/নগদ নম্বরে টাকা পাঠান: <strong>০১৮১৩-৫৫৮২৯৯</strong>
                   </AlertDescription>
                 </Alert>
+                <div className="space-y-1.5">
+                  <Label htmlFor="deliveryLocation" className="text-xs md:text-sm">
+                    ডেলিভারি এলাকা *
+                  </Label>
+                  <select
+                    id="deliveryLocation"
+                    value={formData.deliveryLocation}
+                    onChange={(e) => handleInputChange("deliveryLocation", e.target.value)}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  >
+                    <option value="inside-dhaka">ঢাকার মধ্যে (ডেলিভারি চার্জ: ৳৫০)</option>
+                    <option value="outside-dhaka">ঢাকার বাইরে (ডেলিভারি চার্জ: ৳১০০)</option>
+                  </select>
+                </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="paymentReference" className="text-xs md:text-sm">
                     পেমেন্ট রেফারেন্স নম্বর *

@@ -22,35 +22,19 @@ export const metadata: Metadata = {
 const products = [
   {
     id: "1",
-    name: "প্রিমিয়াম সরিষার তেল",
-    nameBangla: "Premium Mustard Oil",
-    price: 350,
+    name: "মাঘি+শ্বেতী সরিষার তেল",
+    nameBangla: "Maghi+Shweti Mustard Oil",
+    price: 290,
     image: "/premium-mustard-oil-bottle-on-wooden-surface.jpg",
-    sizes: ["৫০০মিলি", "১লিটার", "২লিটার", "৫লিটার"],
+    sizes: ["১লিটার", "৫লিটার"],
   },
   {
     id: "2",
-    name: "কোল্ড প্রেসড সরিষার তেল",
-    nameBangla: "Cold Pressed Mustard Oil",
-    price: 420,
+    name: "শুধুমাত্র মাঘি সরিষার তেল",
+    nameBangla: "Pure Maghi Mustard Oil",
+    price: 350,
     image: "/cold-pressed-mustard-oil-with-mustard-seeds.jpg",
-    sizes: ["৫০০মিলি", "১লিটার", "২লিটার"],
-  },
-  {
-    id: "3",
-    name: "অর্গানিক সরিষার তেল",
-    nameBangla: "Organic Mustard Oil",
-    price: 480,
-    image: "/organic-mustard-oil-with-fresh-mustard-plants.jpg",
-    sizes: ["৫০০মিলি", "১লিটার", "২লিটার", "৫লিটার"],
-  },
-  {
-    id: "4",
-    name: "ঐতিহ্যবাহী সরিষার তেল",
-    nameBangla: "Traditional Mustard Oil",
-    price: 320,
-    image: "/traditional-mustard-oil-clay-pot.jpg",
-    sizes: ["১লিটার", "২লিটার", "৫লিটার"],
+    sizes: ["১লিটার", "৫লিটার"],
   },
 ]
 
@@ -151,6 +135,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-8 md:py-12 lg:py-16 bg-secondary/10">
+        <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16">
+          <div className="mb-6 md:mb-8 text-center space-y-2">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-foreground">আমাদের ঘানি প্রক্রিয়া</h2>
+            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto px-4">
+              দেখুন কিভাবে আমরা ঐতিহ্যবাহী পদ্ধতিতে সরিষার তেল তৈরি করি
+            </p>
+          </div>
+          <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftahkiqbd%2Fvideos%2F980055749843853%2F&show_text=false&width=560&t=0"
+                width="100%"
+                height="100%"
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              />
+            </div>
+            <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D413740924807469&show_text=false&width=267&t=0"
+                width="100%"
+                height="100%"
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              />
+            </div>
+            <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1230128284652122&show_text=false&width=267&t=0"
+                width="100%"
+                height="100%"
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-8 md:py-12 lg:py-16 bg-background">
         <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16">
@@ -165,18 +199,26 @@ export default function HomePage() {
             </div>
             <div className="space-y-3 md:space-y-4">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-foreground text-balance">
-                ঐতিহ্যবাহী পদ্ধতি, আধুনিক মান
+                আদিকালের গরুর ঘানি পদ্ধতি
               </h2>
               <p className="text-xs md:text-sm text-muted-foreground text-pretty">
-                তাহকিক ঘানিবাড়িতে আমরা বিশ্বাস করি ঐতিহ্যবাহী সরিষার তেল উৎপাদন শিল্পকে সংরক্ষণে এবং আধুনিক মানদণ্ড মেনে চলতে। আমাদের
-                সরিষার তেল প্রজন্মের পর প্রজন্ম ধরে চলে আসা কোল্ড প্রেসিং পদ্ধতি ব্যবহার করে নিষ্কাশিত হয়।
+                আমরা ব্যবহার করি আদিকালের গরুর ঘানি পদ্ধতি, যেখানে কাঠের উপর কাঠ দিয়ে সরিষা পেষা হয়। প্রতি ২ ঘন্টা পরপর ঘানির গর্তের মধ্য থেকে সব খৈল ভালোভাবে ক্লিন করে নতুন আরেক সেট ঘানি চালু করা হয়।
               </p>
               <p className="text-xs md:text-sm text-muted-foreground text-pretty">
-                আমাদের প্রতিটি বোতলে রয়েছে প্রকৃত বাঙালি ঐতিহ্যের সারাংশ, যা আপনার রান্নার জন্য নিয়ে আসে সবচেয়ে খাঁটি এবং সুস্বাদু তেল।
+                এই প্রক্রিয়ায় ঘানির মধ্যে ঠাণ্ডা হবার সুযোগ পাওয়ায় তেলে হিট হয় অনেক কম (মাত্র ৪০-৪৫ ডিগ্রি সেন্টিগ্রেড)। একমাত্র এই গরুর ঘানি পদ্ধতিতেই প্রকৃত কোল্ড প্রেসড তেল উৎপাদন সম্ভব।
               </p>
+              <div className="bg-primary/10 p-4 rounded-lg">
+                <p className="text-xs md:text-sm font-semibold text-foreground mb-2">বর্তমান তেলের মূল্য:</p>
+                <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
+                  <li>◑ মাঘি+শ্বেতী সরিষার তেল: ৳২৯০/লিটার (৫ লিটার - ৳১৪৫০)</li>
+                  <li>◑ শুধুমাত্র মাঘি সরিষায় ভাঙ্গানো তেল: ৳৩৫০/লিটার (৫ লিটার - ৳১৭৫০)</li>
+                  <li>◑ ডেলিভারি চার্জ ঢাকার মধ্যে: ৳৫০</li>
+                  <li>◑ ডেলিভারি চার্জ ঢাকার বাইরে: ৳১০০</li>
+                </ul>
+              </div>
               <div className="flex gap-3 pt-2">
-                <Button variant="outline" className="text-sm w-full sm:w-auto bg-transparent">
-                  আমাদের গল্প
+                <Button variant="outline" className="text-sm w-full sm:w-auto bg-transparent" asChild>
+                  <a href="#products">এখনই অর্ডার করুন</a>
                 </Button>
               </div>
             </div>

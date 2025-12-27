@@ -24,7 +24,8 @@ export function StructuredData() {
       "addressCountry": "BD"
     },
     "sameAs": [
-      "https://www.facebook.com/tahkiqbd"
+      "https://www.facebook.com/tahkiqbd",
+      "https://www.instagram.com/tahkiqbd/"
     ]
   }
 
