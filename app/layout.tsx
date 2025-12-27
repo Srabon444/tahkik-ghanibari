@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { CartProvider } from "@/lib/cart-context"
+import { GoogleAnalytics, GoogleTagManager, GoogleTagManagerNoScript } from "@/components/analytics"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -85,10 +86,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bn">
-      <meta name="google-site-verification" content="g-fEhzecpH0Xx0EzeLCmNiX6zTeloq_lCPH35YYPATw" />
+      <head>
+        <GoogleTagManager />
+      </head>
       <body className={`font-sans antialiased`}>
+        <GoogleTagManagerNoScript />
         <CartProvider>{children}</CartProvider>
         <Analytics />
+        <GoogleAnalytics />
       </body>
     </html>
   )
