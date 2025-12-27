@@ -70,8 +70,8 @@ export default function HomePage() {
                 <Button size="lg" className="text-sm md:text-base w-full sm:w-auto" asChild>
                   <a href="#products">এখনই কিনুন</a>
                 </Button>
-                <Button size="lg" variant="outline" className="text-sm md:text-base w-full sm:w-auto bg-transparent">
-                  আরও জানুন
+                <Button size="lg" variant="outline" className="text-sm md:text-base w-full sm:w-auto bg-transparent" asChild>
+                  <a href="#about">আরও জানুন</a>
                 </Button>
               </div>
             </div>
@@ -192,7 +192,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-8 md:py-12 lg:py-16 bg-secondary/10">
+      <section id="about" className="py-8 md:py-12 lg:py-16 bg-secondary/10">
         <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16">
           <div className="grid gap-6 md:gap-8 lg:grid-cols-2 items-center">
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
