@@ -38,6 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="google-site-verification" content="g-fEhzecpH0Xx0EzeLCmNiX6zTeloq_lCPH35YYPATw" />
       <body className={`font-sans antialiased`}>
         <CartProvider>{children}</CartProvider>
         <Analytics />
