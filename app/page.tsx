@@ -142,7 +142,7 @@ export default function HomePage() {
       </section>
 
       {/* Video Section */}
-      <section className="py-8 md:py-12 lg:py-16 bg-secondary/10">
+      <section className="py-8 md:py-12 lg:py-16 bg-background">
         <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16">
           <div className="mb-6 md:mb-8 text-center space-y-2">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-foreground">আমাদের ঘানি প্রক্রিয়া</h2>
@@ -151,7 +151,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-lg overflow-hidden bg-muted" style={{ height: '400px' }}>
+            <div className="aspect-video rounded-lg overflow-hidden bg-muted shadow-md">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftahkiqbd%2Fvideos%2F980055749843853%2F&show_text=false&width=560&t=0"
                 width="100%"
@@ -163,7 +163,7 @@ export default function HomePage() {
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               />
             </div>
-            <div className="rounded-lg overflow-hidden bg-muted" style={{ height: '400px' }}>
+            <div className="aspect-video rounded-lg overflow-hidden bg-muted shadow-md">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D413740924807469&show_text=false&width=267&t=0"
                 width="100%"
@@ -175,7 +175,7 @@ export default function HomePage() {
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               />
             </div>
-            <div className="rounded-lg overflow-hidden bg-muted" style={{ height: '400px' }}>
+            <div className="aspect-[9/16] rounded-lg overflow-hidden bg-muted shadow-md mx-auto max-w-sm w-full">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1230128284652122&show_text=false&width=267&t=0"
                 width="100%"
@@ -192,7 +192,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-8 md:py-12 lg:py-16 bg-background">
+      <section className="py-8 md:py-12 lg:py-16 bg-secondary/10">
         <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16">
           <div className="grid gap-6 md:gap-8 lg:grid-cols-2 items-center">
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
