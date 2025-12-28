@@ -239,12 +239,11 @@ export default function HomePage() {
             <div className="flex items-center gap-2">
               <Leaf className="h-4 w-4 text-primary" />
               <span className="text-xs md:text-sm text-muted-foreground text-center">
-                © {new Date().getFullYear()} Tahkiq Ghanibari. All rights reserved. |{" "}
-                <a
+                © {new Date().getFullYear()} <a
                   href="https://tahkiqghanibari.vercel.app"
                   className="hover:text-foreground transition-colors"
                 >
-                  Tahkiq Ghanibari</a>{" "}
+                  Tahkiq Ghanibari</a> All rights reserved. {" "}
                 | Powered by {" "}
                 <a
                   href="https://www.devashraful.me/"
