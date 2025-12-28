@@ -6,14 +6,14 @@ import { Leaf, Droplets, Shield, Truck } from "lucide-react"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "প্রিমিয়াম সরিষার তেল - তাহকিক ঘানিবাড়ি | Premium Mustard Oil Bangladesh",
-  description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল। কোল্ড প্রেসড, অর্গানিক সরিষার তেল সরাসরি ঘানিবাড়ি থেকে। Premium quality cold pressed mustard oil from traditional farming.",
-  keywords: "সরিষার তেল, mustard oil, খাঁটি সরিষার তেল, cold pressed mustard oil, organic mustard oil, ঘানির তেল, তাহকিক ঘানিবাড়ি, bangladesh mustard oil",
+  title: "Tahkiq Ghanibari - Premium Cold Pressed Mustard Oil Bangladesh | প্রিমিয়াম সরিষার তেল",
+  description: "Tahkiq Ghanibari - Bangladesh's finest cold pressed mustard oil from traditional ghani method. 100% pure, organic & chemical-free. ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল ঐতিহ্যবাহী ঘানিতে তৈরি।",
+  keywords: "Tahkiq Ghanibari, tahkiq, ghanibari, cold pressed mustard oil Bangladesh, premium mustard oil, organic mustard oil, pure mustard oil, traditional ghani oil, তাহকিক ঘানিবাড়ি, সরিষার তেল, খাঁটি সরিষার তেল, ঘানির তেল",
   openGraph: {
-    title: "প্রিমিয়াম সরিষার তেল - তাহকিক ঘানিবাড়ি",
-    description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল",
+    title: "Tahkiq Ghanibari - Premium Cold Pressed Mustard Oil | প্রিমিয়াম সরিষার তেল",
+    description: "Tahkiq Ghanibari offers premium cold pressed mustard oil from traditional ghani in Bangladesh. ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল।",
     url: "https://tahkiqghanibari.vercel.app",
-    siteName: "তাহকিক ঘানিবাড়ি",
+    siteName: "Tahkiq Ghanibari | তাহকিক ঘানিবাড়ি",
     type: "website",
     locale: "bn_BD",
   },
@@ -59,12 +59,12 @@ export default function HomePage() {
                 <span className="text-xs md:text-sm font-medium text-primary">১০০% খাঁটি ও প্রাকৃতিক</span>
               </div>
               <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl lg:text-5xl text-balance">
-                প্রিমিয়াম সরিষার তেল
-                <span className="block text-primary mt-1">তাহকিক ঘানিবাড়ি</span>
+                Tahkiq Ghanibari
+                <span className="block text-primary mt-1">Premium Mustard Oil | প্রিমিয়াম সরিষার তেল</span>
               </h1>
               <p className="text-sm md:text-base text-muted-foreground text-pretty max-w-xl">
-                ঐতিহ্যবাহী ঘানিতে তৈরি সরিষার তেলের প্রকৃত স্বাদ অনুভব করুন। সেরা মানের সরিষা থেকে কোল্ড প্রেসিং পদ্ধতিতে তৈরি, যা প্রাকৃতিক
-                পুষ্টি এবং স্বাদ অক্ষুণ্ণ রাখে।
+                Experience authentic cold pressed mustard oil from traditional ghani method. 100% pure, organic, and chemical-free.<br/>
+                ঐতিহ্যবাহী ঘানিতে তৈরি সরিষার তেলের প্রকৃত স্বাদ অনুভব করুন। সেরা মানের সরিষা থেকে কোল্ড প্রেসিং পদ্ধতিতে তৈরি।
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                 <Button size="lg" className="text-sm md:text-base w-full sm:w-auto" asChild>

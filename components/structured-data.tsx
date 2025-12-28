@@ -5,10 +5,10 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Tahkiq Ghanibari",
-    "alternateName": "তাহকিক ঘানিবাড়ি",
+    "alternateName": ["তাহকিক ঘানিবাড়ি", "Tahkiq", "Ghanibari"],
     "url": "https://tahkiqghanibari.vercel.app",
     "logo": "https://tahkiqghanibari.vercel.app/icon.svg",
-    "description": "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল। Premium quality cold pressed mustard oil from traditional farming in Bangladesh.",
+    "description": "Tahkiq Ghanibari - Bangladesh's premium cold pressed mustard oil from traditional ghani method. 100% pure, organic & chemical-free. ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল ঐতিহ্যবাহী ঘানিতে তৈরি।",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+880-1813-558299",
@@ -46,7 +46,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Tahkiq Ghanibari",
-    "alternateName": "তাহকিক ঘানিবাড়ি",
+    "alternateName": ["তাহকিক ঘানিবাড়ি", "Tahkiq", "Ghanibari", "Tahkiq Ghanibari Bangladesh"],
     "image": "https://tahkiqghanibari.vercel.app/mustard-oil-bottle-with-mustard-flowers-and-seeds-.jpg",
     "@id": "https://tahkiqghanibari.vercel.app",
     "url": "https://tahkiqghanibari.vercel.app",
@@ -84,6 +84,26 @@ export function StructuredData() {
     ]
   }
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Tahkiq Ghanibari Premium Cold Pressed Mustard Oil",
+    "alternateName": "তাহকিক ঘানিবাড়ি প্রিমিয়াম সরিষার তেল",
+    "image": "https://tahkiqghanibari.vercel.app/mustard-oil-bottle-with-mustard-flowers-and-seeds-.jpg",
+    "description": "Tahkiq Ghanibari offers premium 100% pure cold pressed mustard oil from traditional ghani method in Bangladesh. Organic, chemical-free, and naturally extracted.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Tahkiq Ghanibari"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "BDT",
+      "lowPrice": "290",
+      "highPrice": "1750",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+
   return (
     <>
       <Script
@@ -105,6 +125,13 @@ export function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessSchema),
+        }}
+      />
+      <Script
+        id="product-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema),
         }}
       />
     </>

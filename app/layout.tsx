@@ -12,11 +12,11 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Tahkiq Ghanibari - Pure Mustard Oil | তাহকিক ঘানিবাড়ি - খাঁটি সরিষার তেল",
-    template: "%s | তাহকিক ঘানিবাড়ি"
+    default: "Tahkiq Ghanibari - Premium Cold Pressed Mustard Oil | তাহকিক ঘানিবাড়ি - খাঁটি সরিষার তেল",
+    template: "%s | Tahkiq Ghanibari"
   },
-  description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল। কোল্ড প্রেসড, অর্গানিক সরিষার তেল সরাসরি ঘানিবাড়ি থেকে। Premium quality cold pressed mustard oil from traditional farming in Bangladesh.",
-  keywords: "সরিষার তেল, mustard oil, খাঁটি সরিষার তেল, cold pressed mustard oil, organic mustard oil, ঘানির তেল, তাহকিক ঘানিবাড়ি, bangladesh mustard oil, pure mustard oil",
+  description: "Tahkiq Ghanibari offers premium cold pressed mustard oil from traditional ghani method in Bangladesh. ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল। 100% pure, organic, and naturally extracted mustard oil.",
+  keywords: "Tahkiq Ghanibari, tahkiq, ghanibari, mustard oil bangladesh, cold pressed mustard oil, organic mustard oil, pure mustard oil, bangladesh mustard oil, তাহকিক ঘানিবাড়ি, সরিষার তেল, খাঁটি সরিষার তেল, ঘানির তেল, traditional mustard oil, ghani oil",
   authors: [{ name: "Tahkiq Ghanibari" }],
   creator: "Tahkiq Ghanibari",
   publisher: "Tahkiq Ghanibari",
@@ -27,10 +27,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "bn_BD",
+    alternateLocale: ["en_US"],
     url: "https://tahkiqghanibari.vercel.app",
-    siteName: "তাহকিক ঘানিবাড়ি",
-    title: "Tahkiq Ghanibari - Pure Mustard Oil | তাহকিক ঘানিবাড়ি",
-    description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল",
+    siteName: "Tahkiq Ghanibari | তাহকিক ঘানিবাড়ি",
+    title: "Tahkiq Ghanibari - Premium Cold Pressed Mustard Oil Bangladesh | তাহকিক ঘানিবাড়ি",
+    description: "Tahkiq Ghanibari - Premium cold pressed mustard oil from traditional ghani method. ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল। Organic & pure mustard oil in Bangladesh.",
     images: [
       {
         url: "/mustard-oil-bottle-with-mustard-flowers-and-seeds-.jpg",
@@ -42,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tahkiq Ghanibari - Pure Mustard Oil",
-    description: "ঐতিহ্যবাহী ঘানিতে তৈরি ১০০% খাঁটি ও প্রাকৃতিক সরিষার তেল",
+    title: "Tahkiq Ghanibari - Premium Cold Pressed Mustard Oil Bangladesh",
+    description: "Tahkiq Ghanibari offers 100% pure, organic cold pressed mustard oil from traditional ghani method. ঐতিহ্যবাহী ঘানিতে তৈরি খাঁটি সরিষার তেল।",
     images: ["/mustard-oil-bottle-with-mustard-flowers-and-seeds-.jpg"],
   },
   robots: {
@@ -90,6 +91,11 @@ export default function RootLayout({
       <head>
         <GoogleTagManager />
         <StructuredData />
+        <link rel="alternate" hrefLang="bn" href="https://tahkiqghanibari.vercel.app" />
+        <link rel="alternate" hrefLang="en" href="https://tahkiqghanibari.vercel.app" />
+        <link rel="alternate" hrefLang="x-default" href="https://tahkiqghanibari.vercel.app" />
+        <meta name="language" content="Bengali, English" />
+        <meta property="og:locale:alternate" content="en_US" />
       </head>
       <body className={`font-sans antialiased`}>
         <GoogleTagManagerNoScript />
