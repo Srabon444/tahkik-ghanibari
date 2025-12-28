@@ -195,10 +195,10 @@ export default function HomePage() {
       <section id="about" className="py-8 md:py-12 lg:py-16 bg-secondary/10">
         <div className="container max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16">
           <div className="grid gap-6 md:gap-8 lg:grid-cols-2 items-center">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+            <div className="relative aspect-4/3 overflow-hidden rounded-lg">
               <Image
                 src="/oil-extract.png"
-                alt="ঐতিহ্যবাহী পদ্ধতি"
+                alt="Tahkiq Ghanibari"
                 fill
                 className="object-cover"
               />
@@ -239,15 +239,20 @@ export default function HomePage() {
             <div className="flex items-center gap-2">
               <Leaf className="h-4 w-4 text-primary" />
               <span className="text-xs md:text-sm text-muted-foreground text-center">
-                © ২০২৫ তাহকিক ঘানিবাড়ি। সর্বস্বত্ব সংরক্ষিত। |{" "}
+                © {new Date().getFullYear()} Tahkiq Ghanibari. All rights reserved. |{" "}
+                <a
+                  href="https://tahkiqghanibari.vercel.app"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Tahkiq Ghanibari</a>{" "}
+                | Powered by {" "}
                 <a
                   href="https://www.devashraful.me/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
                 >
-                  পাওয়ার্ড বাই আশরাফুল
-                </a>
+                  Ashraful                </a>
               </span>
             </div>
             <div className="flex flex-wrap justify-center gap-3 md:gap-4">
