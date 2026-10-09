@@ -28,7 +28,13 @@ A fully functional e-commerce website for selling pure mustard oil.
 
 ## Setup
 
-1. Clone the repository
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Srabon444/tahkik-ghanibari.git
+   cd tahkik-ghanibari
+   ```
+
 2. Install dependencies: `npm install` or `pnpm install`
 3. Configure EmailJS (see [EMAILJS_SETUP.md](./EMAILJS_SETUP.md))
 4. Add environment variables (see [.env.example](./.env.example))
